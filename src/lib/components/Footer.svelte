@@ -1,4 +1,6 @@
 <script lang="ts">
+	import logo from '$lib/assets/logo.svg';
+
 	const links = [
 		{
 			title: 'Features',
@@ -26,7 +28,7 @@
 <footer class="py-16">
 	<div class="mx-auto max-w-5xl px-6">
 		<a class="mx-auto block size-fit" href="/" aria-label="Go home">
-			<!-- Logo -->
+			<img class="size-8" src={logo} alt="Hyperion logo" width="32" height="32" />
 		</a>
 
 		<nav class="my-8 flex flex-wrap justify-center gap-6 text-sm">

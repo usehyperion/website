@@ -1,7 +1,9 @@
 <script lang="ts">
 	import List from 'phosphor-svelte/lib/List';
 	import X from 'phosphor-svelte/lib/X';
+	import logo from '$lib/assets/logo.svg';
 	import { Button } from '$lib/components/ui/button';
+	import { cn } from '$lib/utils';
 
 	const links = [
 		{ title: 'Features', href: '#features' },
@@ -18,15 +20,15 @@
 <header>
 	<nav class="fixed z-50 w-full px-2" data-state={menuOpen ? 'open' : 'closed'}>
 		<div
-			class={[
-				'mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12',
+			class={cn(
+				'mx-auto mt-2 max-w-6xl px-6 transition-all duration-500 ease-out lg:px-10',
 				scrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5'
-			]}
+			)}
 		>
 			<div class="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
 				<div class="flex w-full justify-between lg:w-auto">
-					<a href="/" aria-label="Go home">
-						<!-- Logo -->
+					<a class="inline-flex items-center gap-1" href="/" aria-label="Go home">
+						<img class="size-8" src={logo} alt="Hyperion logo" width="32" height="32" />
 					</a>
 
 					<button
