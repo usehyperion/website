@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Download from '$lib/components/Download.svelte';
+	import Contribute from '$lib/components/Contribute.svelte';
 	import Features from '$lib/components/Features.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import preview from '$lib/assets/preview.png';
@@ -12,4 +12,4 @@
 </div>
 
 <Features />
-<Download />
+<Contribute />
