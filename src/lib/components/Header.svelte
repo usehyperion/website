@@ -60,8 +60,8 @@
 
 				<div
 					class={[
-						'bg-background/50 mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 backdrop-blur-lg in-data-[state=active]:block md:flex-nowrap dark:shadow-none dark:lg:bg-transparent',
-						'lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex'
+						'bg-background/50 mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 backdrop-blur-lg in-data-[state=open]:block md:flex-nowrap dark:shadow-none dark:lg:bg-transparent',
+						'lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=open]:flex'
 					]}
 				>
 					<div class="lg:hidden">
