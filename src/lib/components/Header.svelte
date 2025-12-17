@@ -15,7 +15,7 @@
 	let scrolled = $state(false);
 </script>
 
-<svelte:window onscroll={() => (scrolled = scrollY > 75)} />
+<svelte:window onscroll={() => (scrolled = scrollY > 100)} />
 
 <header>
 	<nav class="fixed z-50 w-full px-2" data-state={menuOpen ? 'open' : 'closed'}>
