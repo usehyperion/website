@@ -4,6 +4,7 @@
 	import logo from '$lib/assets/logo.svg';
 	import { Button } from '$lib/components/ui/button';
 	import { cn } from '$lib/utils';
+	import { fly } from 'svelte/transition';
 
 	const links = [
 		{ title: 'Features', href: '#features' },
@@ -58,18 +59,28 @@
 					</ul>
 				</div>
 
-				<div
-					class={[
-						'bg-background/50 mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 backdrop-blur-lg in-data-[state=open]:block md:flex-nowrap dark:shadow-none dark:lg:bg-transparent',
-						'lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=open]:flex'
-					]}
-				>
-					<div class="lg:hidden">
-						<ul class="space-y-6 text-base">
-							{@render navItems()}
-						</ul>
-					</div>
+				{#if menuOpen}
+					<div
+						class="bg-background/50 mb-6 block w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 backdrop-blur-lg md:flex-nowrap lg:hidden dark:shadow-none"
+						transition:fly={{ y: -10, duration: 200 }}
+					>
+						<div class="lg:hidden">
+							<ul class="space-y-6 text-base">
+								{@render navItems()}
+							</ul>
+						</div>
 
+						<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+							<Button class="lg:inline-flex" href="/download" size="sm">
+								<span>Download</span>
+							</Button>
+						</div>
+					</div>
+				{/if}
+
+				<div
+					class="hidden lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none"
+				>
 					<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
 						<Button class="lg:inline-flex" href="/download" size="sm">
 							<span>Download</span>
