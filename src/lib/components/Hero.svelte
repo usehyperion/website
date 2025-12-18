@@ -32,8 +32,8 @@
 			<div
 				class="mx-auto max-w-xs space-y-4 sm:inline-flex sm:max-w-none sm:justify-center sm:space-y-0 sm:space-x-4"
 			>
-				<Button>Download</Button>
-				<Button variant="secondary">Explore features</Button>
+				<Button href="https://github.com/usehyperion/hyperion/releases">Download</Button>
+				<Button href="#features" variant="secondary">Explore features</Button>
 			</div>
 		</div>
 	</div>

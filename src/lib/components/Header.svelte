@@ -71,8 +71,12 @@
 						</div>
 
 						<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-							<Button class="lg:inline-flex" href="/download" size="sm">
-								<span>Download</span>
+							<Button
+								class="lg:inline-flex"
+								href="https://github.com/usehyperion/hyperion/releases"
+								size="sm"
+							>
+								Download
 							</Button>
 						</div>
 					</div>
@@ -82,8 +86,12 @@
 					class="hidden lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none"
 				>
 					<div class="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-						<Button class="lg:inline-flex" href="/download" size="sm">
-							<span>Download</span>
+						<Button
+							class="lg:inline-flex"
+							href="https://github.com/usehyperion/hyperion/releases"
+							size="sm"
+						>
+							Download
 						</Button>
 					</div>
 				</div>
