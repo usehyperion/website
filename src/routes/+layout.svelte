@@ -2,7 +2,7 @@
 	import '../app.css';
 	import logo from '$lib/assets/logo.svg';
 	import ogDefault from '$lib/assets/og-default.jpg';
-	import Header from '$lib/components/Header.svelte';
+	// import Header from '$lib/components/Header.svelte';
 	import { ModeWatcher } from 'mode-watcher';
 	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/state';
@@ -32,7 +32,7 @@
 </svelte:head>
 
 <ModeWatcher />
-<Header />
+<!-- <Header /> -->
 
 <div class="flex min-h-screen flex-col overflow-clip">
 	<main class="grow">
