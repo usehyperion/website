@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import cloudflare from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsx } from 'mdsx';
 import mdsxConfig from './mdsx.config.js';
@@ -8,7 +8,7 @@ const config = {
 	preprocess: [mdsx(mdsxConfig), vitePreprocess()],
 	extensions: ['.svelte', '.md'],
 	kit: {
-		adapter: adapter()
+		adapter: cloudflare()
 	}
 };
 
