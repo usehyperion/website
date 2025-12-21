@@ -8,7 +8,10 @@ const config = {
 	preprocess: [mdsx(mdsxConfig), vitePreprocess()],
 	extensions: ['.svelte', '.md'],
 	kit: {
-		adapter: cloudflare()
+		adapter: cloudflare(),
+		alias: {
+			$content: './.velite'
+		}
 	}
 };
 

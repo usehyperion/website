@@ -11,8 +11,8 @@
 			href: '/docs'
 		},
 		{
-			title: 'Changelog',
-			href: '/changelog'
+			title: 'Releases',
+			href: '/releases'
 		},
 		{
 			title: 'Report an issue',

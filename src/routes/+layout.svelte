@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '@fontsource-variable/geist-mono';
 	import '../app.css';
 	import logo from '$lib/assets/logo.svg';
 	import ogDefault from '$lib/assets/og-default.jpg';

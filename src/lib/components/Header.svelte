@@ -9,7 +9,7 @@
 	const links = [
 		{ title: 'Features', href: '#features' },
 		{ title: 'Docs', href: '/docs' },
-		{ title: 'Changelog', href: '/changelog' }
+		{ title: 'Releases', href: '/releases' }
 	];
 
 	let menuOpen = $state(false);
