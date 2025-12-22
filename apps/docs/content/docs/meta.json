@@ -1,0 +1,13 @@
+{
+	"title": "User Guide",
+	"root": true,
+	"pages": [
+		"introduction",
+		"---Features---",
+		"...(features)",
+		"---Theme Development---",
+		"...(themes)",
+		"---Contributing---",
+		"...(contributing)"
+	]
+}

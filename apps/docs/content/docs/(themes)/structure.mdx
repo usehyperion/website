@@ -1,0 +1,25 @@
+---
+title: Structure
+---
+
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+
+The basic structure of a theme consists of two files: `main.css` and `manifest.json`. The `main.css` file contains all the CSS code that defines the appearance of the theme, while the `manifest.json` file provides metadata about the theme, such as its name, author, and version.
+
+<Files>
+	<Folder name="my-theme" defaultOpen>
+		<File name="main.css" />
+		<File name="manifest.json" />
+	</Folder>
+</Files>
+
+The `manifest.json` file should follow this structure:
+
+```json
+{
+	"name": "My Theme",
+	"author": "Your Name",
+	"version": "1.0.0",
+	"description": "A brief description of your theme."
+}
+```
