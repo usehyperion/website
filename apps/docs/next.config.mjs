@@ -5,6 +5,15 @@ const withMDX = createMDX();
 /** @type {import('next').NextConfig} */
 const config = {
 	reactStrictMode: true,
+	redirects() {
+		return [
+			{
+				source: '/',
+				destination: '/introduction',
+				permanent: true
+			}
+		];
+	},
 	experimental: {
 		optimizePackageImports: ['@phosphor-icons/react']
 	}
