@@ -10,6 +10,7 @@ node_modules
 build
 .turbo
 .next
+.open-next
 .source
 
 # OS
@@ -21,6 +22,7 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
+.*.vars
 next-env.d.ts
 
 # Vite
