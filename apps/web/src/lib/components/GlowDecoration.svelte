@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="pointer-events-none absolute top-0 left-1/2 -z-10 flex aspect-square w-[800px] -translate-x-1/2 -translate-y-1/2 items-center justify-center"
+	class="pointer-events-none absolute top-0 left-1/2 -z-10 flex aspect-square w-200 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
 	aria-hidden="true"
 >
 	<div class="absolute inset-0 translate-z-0 rounded-full bg-orange-500/30 blur-[120px]"></div>

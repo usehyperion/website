@@ -109,7 +109,7 @@
 							)}
 
 							<div
-								class="grid h-64 w-full grid-cols-1 grid-rows-1 overflow-hidden max-md:-mt-6 md:h-auto md:max-h-[500px] md:pt-8"
+								class="grid h-64 w-full grid-cols-1 grid-rows-1 overflow-hidden max-md:-mt-6 md:h-auto md:max-h-125 md:pt-8"
 							>
 								{@render themePreview(themeBubblegum, 'translate-x-0 translate-y-0')}
 
@@ -186,7 +186,7 @@
 </section>
 
 {#snippet hgroup(Icon: Component, title: string, description: string)}
-	<hgroup class="shrink-0 p-6 md:max-w-[480px] md:p-8">
+	<hgroup class="shrink-0 p-6 md:max-w-120 md:p-8">
 		<h3
 			class="from-foreground/80 via-foreground to-foreground/80 inline-flex items-center gap-x-2 bg-linear-to-r bg-clip-text pb-1 text-xl font-semibold text-transparent"
 		>
