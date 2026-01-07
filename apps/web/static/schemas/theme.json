@@ -1,0 +1,35 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Hyperion Theme Manifest",
+	"type": "object",
+	"properties": {
+		"version": {
+			"type": "string",
+			"description": "The version of the theme.",
+			"pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+		},
+		"name": {
+			"type": "string",
+			"description": "The name of the theme."
+		},
+		"description": {
+			"type": "string",
+			"description": "A brief description of the theme."
+		},
+		"author": {
+			"type": "string",
+			"description": "The author of the theme."
+		},
+		"repository": {
+			"type": "string",
+			"description": "The URL of the theme's repository.",
+			"format": "uri"
+		}
+	},
+	"required": [
+		"version",
+		"name",
+		"description",
+		"author"
+	]
+}
