@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
 	import Paintbrush from 'phosphor-svelte/lib/PaintBrush';
 	import Layout from 'phosphor-svelte/lib/Layout';
 	import Highlighter from 'phosphor-svelte/lib/Highlighter';
@@ -102,11 +103,25 @@
 								></div>
 							</div>
 
-							{@render hgroup(
-								Paintbrush,
-								'Customizable',
-								'Tailor the interface to your aesthetic with custom CSS themes. Make your own or download themes made by the community.'
-							)}
+							<div class="flex shrink-0 flex-col gap-4">
+								{@render hgroup(
+									Paintbrush,
+									'Customizable',
+									'Tailor the interface to your aesthetic with custom CSS themes. Make your own or download themes made by the community.'
+								)}
+
+								<div class="px-6 md:px-8">
+									<a class="group/a" href="/themes">
+										<span
+											class="text-sm font-semibold underline decoration-orange-400 decoration-2 underline-offset-2"
+										>
+											Explore themes
+										</span>
+
+										<ArrowRight class="inline transition-transform group-hover/a:translate-x-0.5" />
+									</a>
+								</div>
+							</div>
 
 							<div
 								class="grid h-64 w-full grid-cols-1 grid-rows-1 overflow-hidden max-md:-mt-6 md:h-auto md:max-h-125 md:pt-8"
