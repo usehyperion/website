@@ -150,17 +150,17 @@
 		@apply bg-background text-foreground;
 	}
 
-	h1 {
+	h1:not(.prose) {
 		@apply text-6xl font-bold;
 	}
 
-	h2 {
+	h2:not(.prose) {
 		@apply text-5xl font-semibold;
 	}
 }
 
 @utility grid-auto-fill {
-	grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(min(var(--auto-fill-size, 300px), 100%), 1fr));
 }
 
 @utility text-stroke-* {

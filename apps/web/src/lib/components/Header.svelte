@@ -7,8 +7,8 @@
 	import { fly } from 'svelte/transition';
 
 	const links = [
-		{ title: 'Features', href: '#features' },
-		{ title: 'Docs', href: '/docs' },
+		{ title: 'Features', href: '/#features' },
+		{ title: 'Themes', href: '/themes' },
 		{ title: 'Releases', href: '/releases' }
 	];
 

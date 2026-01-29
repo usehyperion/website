@@ -46,6 +46,7 @@
 	"dependencies": {
 		"@fontsource-variable/geist-mono": "^5.2.7",
 		"dayjs": "^1.11.19",
-		"mode-watcher": "^1.1.0"
+		"mode-watcher": "^1.1.0",
+		"octokit": "^5.0.5"
 	}
 }

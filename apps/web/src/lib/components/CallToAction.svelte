@@ -19,9 +19,7 @@
 		<span class="relative inline-flex items-center">
 			{@render children?.()}
 
-			<span
-				class="ml-1 tracking-normal transition-transform duration-150 ease-in-out group-hover:translate-x-0.5"
-			>
+			<span class="ml-1 transition-transform group-hover:translate-x-0.5">
 				<ArrowRight />
 			</span>
 		</span>
