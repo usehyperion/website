@@ -3,6 +3,14 @@
 	import GlowDecoration from '$lib/components/GlowDecoration.svelte';
 
 	const { data } = $props();
+
+	let query = $state('');
+
+	const themes = $derived(
+		data.themes.filter((theme) => {
+			return theme.name.toLowerCase().includes(query.toLowerCase());
+		})
+	);
 </script>
 
 <div class="relative">
@@ -32,11 +40,12 @@
 					class="text-muted-foreground col-start-1 row-start-1 flex h-10 w-full items-center gap-2 rounded-full bg-white pr-3 pl-10 ring-1 ring-neutral-900/10 transition hover:ring-neutral-900/20 dark:bg-white/5 dark:ring-white/10 dark:ring-inset dark:hover:ring-white/20"
 					type="search"
 					placeholder="Search themes"
+					bind:value={query}
 				/>
 			</div>
 
 			<output class="grid-auto-fill mt-6 grid">
-				{#each data.themes as theme (theme.id)}
+				{#each themes as theme (theme.id)}
 					<div
 						class="relative mb-8 rounded-xl border border-neutral-300/10 bg-neutral-700/20 p-4 backdrop-blur-sm"
 					>
