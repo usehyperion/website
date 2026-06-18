@@ -1,8 +1,8 @@
 <script lang="ts">
 	import DownloadSimple from "phosphor-svelte/lib/DownloadSimpleIcon";
 	import GithubLogo from "phosphor-svelte/lib/GithubLogoIcon";
-	import previewDark from "$lib/assets/preview-dark.png";
-	import previewLight from "$lib/assets/preview-light.png";
+	import previewDark from "$lib/assets/preview-dark.png?enhanced";
+	import previewLight from "$lib/assets/preview-light.png?enhanced";
 	import Button from "$lib/components/Button.svelte";
 	import Synthesis from "./Synthesis.svelte";
 </script>

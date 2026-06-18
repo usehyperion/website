@@ -12,9 +12,9 @@
 	import type { Component } from "svelte";
 	import highlights from "$lib/assets/highlights.png";
 	import splitViews from "$lib/assets/split-views.png";
-	import themeBubblegum from "$lib/assets/theme-bubblegum.png";
-	import themeSolarDusk from "$lib/assets/theme-solar-dusk.png";
-	import themeVioletBloom from "$lib/assets/theme-violet-bloom.png";
+	import themeBubblegum from "$lib/assets/theme-bubblegum.png?enhanced";
+	import themeSolarDusk from "$lib/assets/theme-solar-dusk.png?enhanced";
+	import themeVioletBloom from "$lib/assets/theme-violet-bloom.png?enhanced";
 
 	const themes = [
 		{ src: themeBubblegum, name: "Bubblegum" },
