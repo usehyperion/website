@@ -11,6 +11,11 @@ export default defineConfig({
 			allow: [".velite"],
 		},
 	},
+	css: {
+		lightningcss: {
+			exclude: 1048576,
+		},
+	},
 	staged: {
 		"*": "vp check --fix",
 	},
