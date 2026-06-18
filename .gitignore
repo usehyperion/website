@@ -8,7 +8,6 @@ node_modules
 .velite
 .svelte-kit
 build
-.turbo
 
 # OS
 .DS_Store
@@ -23,3 +22,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+.impeccable
+.claude

@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+	--frame: 82rem;
+	--frame-pad: clamp(1rem, 4vw, 2.5rem);
+}
+
+@theme {
+	--color-background: light-dark(oklch(1 0 0), oklch(0 0 0));
+	--color-foreground: light-dark(oklch(0.16 0 0), oklch(0.98 0 0));
+
+	--color-primary: light-dark(oklch(0.16 0 0), oklch(0.98 0 0));
+	--color-primary-foreground: light-dark(oklch(1 0 0), oklch(0 0 0));
+
+	--color-secondary: light-dark(oklch(0.96 0 0), oklch(0.12 0 0));
+	--color-secondary-foreground: light-dark(oklch(0.16 0 0), oklch(0.98 0 0));
+
+	--color-muted: light-dark(oklch(0.96 0 0), oklch(0.12 0 0));
+	--color-muted-foreground: light-dark(oklch(0.45 0 0), oklch(0.65 0 0));
+
+	--color-accent: light-dark(oklch(0.62 0.2 39), oklch(0.7 0.2 41));
+	--color-accent-foreground: light-dark(oklch(1 0 0), oklch(0 0 0));
+
+	--color-border: light-dark(oklch(0.9 0 0), oklch(0.26 0 0));
+
+	--color-line: light-dark(oklch(0.93 0 0), oklch(0.21 0 0));
+	--color-input: light-dark(oklch(0.9 0 0), oklch(0.26 0 0));
+	--color-ring: light-dark(oklch(0.62 0.2 39), oklch(0.7 0.2 41));
+
+	--font-mono: var(--font-geist-mono), ui-monospace, monospace;
+	--font-display: var(--font-geist-pixel-square);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/60;
+	}
+
+	h1:not(.prose *),
+	h2:not(.prose *),
+	h3:not(.prose *) {
+		font-family: var(--font-display);
+		text-wrap: balance;
+	}
+
+	h1:not(.prose *) {
+		font-size: clamp(1.875rem, 1.1rem + 3vw, 3.5rem);
+		line-height: 1.04;
+	}
+
+	h2:not(.prose *) {
+		font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+		line-height: 1.1;
+	}
+
+	h3:not(.prose *) {
+		font-size: 1.25rem;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
+	::selection {
+		background: var(--color-accent);
+		color: var(--color-accent-foreground);
+	}
+}
+
+@utility frame {
+	width: 100%;
+	max-width: var(--frame);
+	margin-inline: auto;
+}
+
+@utility grid-auto-fill {
+	grid-template-columns: repeat(auto-fill, minmax(min(var(--auto-fill-size, 300px), 100%), 1fr));
+}
