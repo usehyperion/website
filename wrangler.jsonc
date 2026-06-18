@@ -1,5 +1,5 @@
 {
-	"name": "hyperion-website",
+	"name": "hyperion-web",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2025-12-19",
 	"compatibility_flags": ["nodejs_als"],
