@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit";
 import { env } from "$env/dynamic/private";
 import { TWITCH_REDIRECT_URI } from "$env/static/private";
+import { redis } from "$lib/redis.js";
 
 export async function GET({ url }) {
 	const code = url.searchParams.get("code");
@@ -28,13 +29,14 @@ export async function GET({ url }) {
 	// should never be invalid
 	if (!valid) error(500);
 
-	const params = new URLSearchParams({
-		user_id: valid.user_id,
+	await redis.json.set(valid.user_id, "$", {
 		access_token: tokens.access_token,
 		refresh_token: tokens.refresh_token,
 	});
 
-	return Response.redirect(`hyperion://auth?${params.toString()}`);
+	await redis.expire(valid.user_id, 60);
+
+	return Response.redirect(`hyperion://auth?user_id=${valid.user_id}`);
 }
 
 async function validate(token: string) {
