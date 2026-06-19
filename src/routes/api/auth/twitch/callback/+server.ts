@@ -3,7 +3,7 @@ import { env } from "$env/dynamic/private";
 import { TWITCH_REDIRECT_URI } from "$env/static/private";
 import { redis } from "$lib/redis.js";
 
-export async function GET({ url }) {
+export async function GET({ url, fetch }) {
 	const code = url.searchParams.get("code");
 	if (!code) {
 		error(400, "Missing 'code' query parameter");
