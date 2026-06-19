@@ -7,7 +7,9 @@ export async function GET({ url }) {
 		error(400, "Missing 'user_id' query parameter");
 	}
 
-	const tokens = await redis.json.get(userId, { path: "$" });
+	const value = await redis.json.get(userId, { path: "$" });
+	const [tokens] = (value as [unknown]) || [];
+
 	if (!tokens) {
 		error(404, "Tokens not found");
 	}
