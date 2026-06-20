@@ -17,6 +17,7 @@
 		"geist-svelte": "^1.0.2",
 		"mode-watcher": "^1.1.0",
 		"octokit": "^5.0.5",
+		"redis": "^6.0.0",
 		"shaders": "^2.5.130"
 	},
 	"devDependencies": {
