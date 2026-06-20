@@ -1,13 +1,15 @@
 import { error } from "@sveltejs/kit";
 import { env } from "$env/dynamic/private";
 import { TWITCH_REDIRECT_URI } from "$env/static/private";
-import { redis } from "$lib/redis.js";
 
-export async function GET({ url, fetch }) {
+export async function GET({ url, platform, fetch }) {
 	const code = url.searchParams.get("code");
 	if (!code) {
 		error(400, "Missing 'code' query parameter");
 	}
+
+	const kv = platform?.env.AUTH;
+	if (!kv) error(500);
 
 	const response = await fetch("https://id.twitch.tv/oauth2/token", {
 		method: "POST",
@@ -29,12 +31,14 @@ export async function GET({ url, fetch }) {
 	// should never be invalid
 	if (!valid) error(500);
 
-	await redis.json.set(valid.user_id, "$", {
-		access_token: tokens.access_token,
-		refresh_token: tokens.refresh_token,
-	});
-
-	await redis.expire(valid.user_id, 60);
+	await kv.put(
+		valid.user_id,
+		JSON.stringify({
+			access_token: tokens.access_token,
+			refresh_token: tokens.refresh_token,
+		}),
+		{ expirationTtl: 60 },
+	);
 
 	return Response.redirect(`hyperion://auth?user_id=${valid.user_id}`);
 }

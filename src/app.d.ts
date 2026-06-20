@@ -12,6 +12,13 @@ declare global {
 			seo: PageSeo;
 		}
 		// interface PageState {}
-		// interface Platform {}
+		interface Platform {
+			env: {
+				AUTH: import("@cloudflare/workers-types").KVNamespace;
+			};
+		}
 	}
 }
+
+// oxlint-disable-next-line unicorn/require-module-specifiers
+export {};

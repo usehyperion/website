@@ -1,4 +1,5 @@
 {
+	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "hyperion-web",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2025-12-19",
@@ -14,6 +15,12 @@
 		{
 			"pattern": "usehyperion.app",
 			"custom_domain": true,
+		},
+	],
+	"kv_namespaces": [
+		{
+			"id": "5580cdabf7764066afbf26af23ad43e5",
+			"binding": "AUTH",
 		},
 	],
 }
