@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit";
-import { TWITCH_CLIENT_ID, TWITCH_CLIENT_SECRET } from "$env/static/private";
+import { env } from "$env/dynamic/private";
 
 export async function POST({ request }) {
 	const { refresh_token } = await request.json();
@@ -14,8 +14,8 @@ export async function POST({ request }) {
 		},
 		body: new URLSearchParams({
 			grant_type: "refresh_token",
-			client_id: TWITCH_CLIENT_ID,
-			client_secret: TWITCH_CLIENT_SECRET,
+			client_id: env.TWITCH_CLIENT_ID,
+			client_secret: env.TWITCH_CLIENT_SECRET,
 			refresh_token,
 		}),
 	});
