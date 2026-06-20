@@ -35,16 +35,16 @@
 		</div>
 	</div>
 
-	<div class="relative frame p-8 *:border">
+	<div class="relative frame p-8">
 		<Synthesis />
 
 		<enhanced:img
-			class="block w-full dark:hidden"
+			class="block w-full border dark:hidden"
 			src={previewLight}
 			alt="Hyperion's Twitch chat interface in light mode"
 		/>
 		<enhanced:img
-			class="hidden w-full dark:block"
+			class="hidden w-full border dark:block"
 			src={previewDark}
 			alt="Hyperion's Twitch chat interface in dark mode"
 		/>
